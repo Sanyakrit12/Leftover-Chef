@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find a Menu - Leftover Chef</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Menu - Leftover Chef</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-    <div class="logo">🍳 Leftover Chef</div>
-    <div class="nav-links">
+  <header>
+    <nav>
+      <div class="logo">🍳 Leftover Chef</div>
+      <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="recipes.html">Recipes</a>
-        <a href="ingredients.html">Find a Menu</a>
+        <a href="ingredients.html" class="active">Find a Menu</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header decor-container">
+      <div class="decor-orb orb-1"></div>
+      <div class="decor-shape shape-circle-lg"></div>
+      <h1>FIND A MENU</h1>
+      <p>What ingredients do you have in your kitchen?</p>
+      <p>Choose your base ingredient below to find popular Thai meals you can make.</p>
     </div>
-</nav>
-    </header>
 
-    <main>
-        <div class="page-header">
-            <h1>FIND A MENU</h1>
-            <p>What ingredients do you have in your kitchen?</p>
-            <p>Choose your base ingredient below to find popular Thai meals you can make.</p>
-        </div>
+    <section class="ingredients decor-container">
+      <div class="decor-orb orb-2"></div>
+      <div class="decor-shape shape-square"></div>
+      <div class="decor-shape shape-ring"></div>
+      <div class="decor-shape shape-dots"></div>
 
-        <section class="ingredients">
-            <div class="ingredient-grid">
-                <a href="recipes.html#rice-recipes" class="ingredient-card">
-                    <span class="ingredient-icon">🍚</span>
-                    <h3>Leftover Rice</h3>
-                    <p>See 3 rice menus →</p>
-                </a>
-                <a href="recipes.html#egg-recipes" class="ingredient-card">
-                    <span class="ingredient-icon">🥚</span>
-                    <h3>Eggs</h3>
-                    <p>See 3 egg menus →</p>
-                </a>
-                <a href="recipes.html#chicken-recipes" class="ingredient-card">
-                    <span class="ingredient-icon">🍗</span>
-                    <h3>Leftover Chicken</h3>
-                    <p>See 3 chicken menus →</p>
-                </a>
-            </div>
-        </section>
-    </main>
+      <div class="ingredient-grid">
+        <a href="recipes.html#rice-recipes" class="ingredient-card">
+          <span class="ingredient-icon">🍚</span>
+          <h3>Leftover Rice</h3>
+          <p>See 3 rice menus →</p>
+        </a>
+        <a href="recipes.html#egg-recipes" class="ingredient-card">
+          <span class="ingredient-icon">🥚</span>
+          <h3>Eggs</h3>
+          <p>See 3 egg menus →</p>
+        </a>
+        <a href="recipes.html#chicken-recipes" class="ingredient-card">
+          <span class="ingredient-icon">🍗</span>
+          <h3>Leftover Chicken</h3>
+          <p>See 3 chicken menus →</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2026 Leftover Chef · Turn leftovers into delicious Thai meals.</p>
-    </footer>
+  <footer>
+    <p>© 2026 Leftover Chef · Turn leftovers into delicious Thai meals.</p>
+  </footer>
 
 </body>
 </html>
