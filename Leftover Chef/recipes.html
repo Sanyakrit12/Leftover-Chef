@@ -1,488 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes - Leftover Chef</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* =========================================
-           TOP QUICK MENU (THEMED TO MATCH DESIGN SYSTEM)
-           ========================================= */
-        .recipes-quick-nav {
-            max-width: 1200px;
-            margin: 0 auto 60px;
-            padding: 0 30px;
-        }
-
-        .quick-nav-container {
-            background-color: #ffffff;
-            border: 1px solid #eee5d8;
-            border-radius: 25px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        }
-
-        .quick-nav-title {
-            text-align: center;
-            font-size: 28px;
-            color: #242424;
-            margin-bottom: 30px;
-        }
-
-        .quick-nav-groups {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .quick-group-header {
-            font-size: 18px;
-            color: #e85d04;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #fff1e6;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .quick-card-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .quick-card {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background-color: #fffaf3;
-            border: 1px solid #eee5d8;
-            padding: 10px 14px;
-            border-radius: 16px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .quick-card:hover {
-            background-color: #ffffff;
-            border-color: #e85d04;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(232, 93, 4, 0.12);
-        }
-
-        .quick-card img {
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .quick-card span {
-            font-size: 14px;
-            font-weight: bold;
-            color: #2d2d2d;
-            line-height: 1.3;
-        }
-
-        .quick-card:hover span {
-            color: #e85d04;
-        }
-
-        /* Responsive Breakpoints for Quick Nav */
-        @media (max-width: 900px) {
-            .quick-nav-groups {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .quick-nav-container {
-                padding: 25px 18px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes - Leftover Chef</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-    <div class="logo">🍳 Leftover Chef</div>
-    <div class="nav-links">
+  <header>
+    <nav>
+      <div class="logo">🍳 Leftover Chef</div>
+      <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="recipes.html">Recipes</a>
+        <a href="recipes.html" class="active">Recipes</a>
         <a href="ingredients.html">Find a Menu</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header decor-container">
+      <div class="decor-orb orb-1"></div>
+      <h1>RECIPES</h1>
+      <p>Simple and authentic Thai recipes using everyday ingredients you have left over.</p>
     </div>
-</nav>
-    </header>
 
-    <main>
-        <div class="page-header">
-            <h1>RECIPES</h1>
-            <p>Simple and authentic Thai recipes using everyday ingredients you have left over.</p>
+    <!-- QUICK NAV MENU -->
+    <section class="recipes-quick-nav decor-container">
+      <div class="decor-shape shape-ring"></div>
+      <div class="quick-nav-container">
+        <h2 class="quick-nav-title">Jump to Recipe</h2>
+        <div class="quick-nav-groups">
+          <!-- Rice Group -->
+          <div class="quick-group">
+            <h3 class="quick-group-header"><span>🍚</span> Rice Dishes</h3>
+            <div class="quick-card-list">
+              <a href="#khao-pad" class="quick-card">
+                <img src="https://thecinnamonjar.com/wp-content/uploads/2023/01/cooked-khao-pad-in-frying-pan.jpg" alt="Khao Pad">
+                <span>Khao Pad (Fried Rice)</span>
+              </a>
+              <a href="#khao-tom" class="quick-card">
+                <img src="https://hungryinthailand.com/wp-content/uploads/2023/08/khao-tom-thai-rice-soup.webp" alt="Khao Tom">
+                <span>Khao Tom (Rice Soup)</span>
+              </a>
+              <a href="#khao-pad-pineapple" class="quick-card">
+                <img src="https://i1.wp.com/justlagom.co/wp-content/uploads/2020/06/pineapple-fried-rice-2.jpeg?fit=1923%2C2048&ssl=1" alt="Khao Pad Sapparot">
+                <span>Khao Pad Sapparot</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Egg Group -->
+          <div class="quick-group">
+            <h3 class="quick-group-header"><span>🥚</span> Egg Dishes</h3>
+            <div class="quick-card-list">
+              <a href="#kai-jeow" class="quick-card">
+                <img src="https://www.cookingwithnart.com/wp-content/uploads/2020/02/Thai-Omelet-Kai-Jeow-2.jpg" alt="Kai Jeow">
+                <span>Kai Jeow (Thai Omelette)</span>
+              </a>
+              <a href="#kai-dao" class="quick-card">
+                <img src="https://thai-foodie.com/wp-content/uploads/2025/03/thai-fried-eggs-1.jpg" alt="Kai Dao">
+                <span>Kai Dao (Fried Egg)</span>
+              </a>
+              <a href="#kai-louk-keuy" class="quick-card">
+                <img src="https://www.curiouscuisiniere.com/wp-content/uploads/2024/09/Son-In-Law-Eggs-3-1200-4-600x800.jpg" alt="Kai Louk Keuy">
+                <span>Kai Louk Keuy</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Chicken Group -->
+          <div class="quick-group">
+            <h3 class="quick-group-header"><span>🍗</span> Chicken Dishes</h3>
+            <div class="quick-card-list">
+              <a href="#pad-kra-pao" class="quick-card">
+                <img src="https://thewoksoflife.com/wp-content/uploads/2016/09/pad-kra-pao-7.jpg" alt="Pad Kra Pao">
+                <span>Pad Kra Pao (Basil Stir-Fry)</span>
+              </a>
+              <a href="#larb-gai" class="quick-card">
+                <img src="https://thai-foodie.com/wp-content/uploads/2023/05/larb-gai.jpg" alt="Larb Gai">
+                <span>Larb Gai (Chicken Salad)</span>
+              </a>
+              <a href="#gai-pad-med" class="quick-card">
+                <img src="https://hungryinthailand.com/wp-content/uploads/2023/03/gai-pad-med-mamuang.webp" alt="Gai Pad Med Mamuang">
+                <span>Gai Pad Med Mamuang</span>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- ==================== TOP QUICK MENU BY INGREDIENT ==================== -->
-        <section class="recipes-quick-nav">
-            <div class="quick-nav-container">
-                <h2 class="quick-nav-title">Jump to Recipe</h2>
-                
-                <div class="quick-nav-groups">
-                    <!-- Rice Group -->
-                    <div class="quick-group">
-                        <h3 class="quick-group-header"><span>🍚</span> Rice Dishes</h3>
-                        <div class="quick-card-list">
-                            <a href="#khao-pad" class="quick-card">
-                                <img src="https://thecinnamonjar.com/wp-content/uploads/2023/01/cooked-khao-pad-in-frying-pan.jpg" alt="Khao Pad">
-                                <span>Khao Pad (Fried Rice)</span>
-                            </a>
-                            <a href="#khao-tom" class="quick-card">
-                                <img src="https://hungryinthailand.com/wp-content/uploads/2023/08/khao-tom-thai-rice-soup.webp" alt="Khao Tom">
-                                <span>Khao Tom (Rice Soup)</span>
-                            </a>
-                            <a href="#khao-pad-pineapple" class="quick-card">
-                                <img src="https://i1.wp.com/justlagom.co/wp-content/uploads/2020/06/pineapple-fried-rice-2.jpeg?fit=1923%2C2048&ssl=1" alt="Khao Pad Sapparot">
-                                <span>Khao Pad Sapparot</span>
-                            </a>
-                        </div>
-                    </div>
+    <!-- RICE RECIPES -->
+    <section id="rice-recipes" class="recipe-section decor-container">
+      <div class="decor-shape shape-circle-lg"></div>
+      <div class="section-heading">
+        <span>🍚</span>
+        <h1>Rice Recipes</h1>
+        <p>Have day-old cold rice? These 3 Thai dishes turn it into perfection.</p>
+      </div>
 
-                    <!-- Egg Group -->
-                    <div class="quick-group">
-                        <h3 class="quick-group-header"><span>🥚</span> Egg Dishes</h3>
-                        <div class="quick-card-list">
-                            <a href="#kai-jeow" class="quick-card">
-                                <img src="https://www.cookingwithnart.com/wp-content/uploads/2020/02/Thai-Omelet-Kai-Jeow-2.jpg" alt="Kai Jeow">
-                                <span>Kai Jeow (Thai Omelette)</span>
-                            </a>
-                            <a href="#kai-dao" class="quick-card">
-                                <img src="https://thai-foodie.com/wp-content/uploads/2025/03/thai-fried-eggs-1.jpg" alt="Kai Dao">
-                                <span>Kai Dao (Fried Egg)</span>
-                            </a>
-                            <a href="#kai-louk-keuy" class="quick-card">
-                                <img src="https://www.curiouscuisiniere.com/wp-content/uploads/2024/09/Son-In-Law-Eggs-3-1200-4-600x800.jpg" alt="Kai Louk Keuy">
-                                <span>Kai Louk Keuy</span>
-                            </a>
-                        </div>
-                    </div>
+      <div id="khao-pad" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://thecinnamonjar.com/wp-content/uploads/2023/01/cooked-khao-pad-in-frying-pan.jpg" alt="Khao Pad">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">RICE · 15 MIN</p>
+          <h1>Khao Pad (Thai Fried Rice)</h1>
+          <p>Traditional Thai fried rice seasoned with fish sauce, soy sauce, and fresh lime.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2 cups cooked leftover jasmine rice (chilled)</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 egg</li>
+            <li>1 tbsp fish sauce</li>
+            <li>1 tbsp soy sauce</li>
+            <li>Lime wedges and cucumber slices for serving</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Heat oil in a pan and sauté garlic until fragrant.</li>
+            <li>Push garlic aside, crack in the egg, and scramble gently.</li>
+            <li>Add cold leftover rice, breaking up any clumps.</li>
+            <li>Drizzle fish sauce and soy sauce over the rice; stir-fry on high heat for 3 minutes.</li>
+            <li>Serve hot with cucumber and fresh lime.</li>
+          </ol>
+        </div>
+      </div>
 
-                    <!-- Chicken Group -->
-                    <div class="quick-group">
-                        <h3 class="quick-group-header"><span>🍗</span> Chicken Dishes</h3>
-                        <div class="quick-card-list">
-                            <a href="#pad-kra-pao" class="quick-card">
-                                <img src="https://thewoksoflife.com/wp-content/uploads/2016/09/pad-kra-pao-7.jpg" alt="Pad Kra Pao">
-                                <span>Pad Kra Pao (Basil Stir-Fry)</span>
-                            </a>
-                            <a href="#larb-gai" class="quick-card">
-                                <img src="https://thai-foodie.com/wp-content/uploads/2023/05/larb-gai.jpg" alt="Larb Gai">
-                                <span>Larb Gai (Chicken Salad)</span>
-                            </a>
-                            <a href="#gai-pad-med" class="quick-card">
-                                <img src="https://hungryinthailand.com/wp-content/uploads/2023/03/gai-pad-med-mamuang.webp" alt="Gai Pad Med Mamuang">
-                                <span>Gai Pad Med Mamuang</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div id="khao-tom" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://hungryinthailand.com/wp-content/uploads/2023/08/khao-tom-thai-rice-soup.webp" alt="Khao Tom">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">RICE · SOUP · 15 MIN</p>
+          <h1>Khao Tom (Thai Rice Soup)</h1>
+          <p>A comforting, fragrant broth cooked with leftover jasmine rice and fresh herbs.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 cup cooked rice</li>
+            <li>2 cups chicken or vegetable broth</li>
+            <li>1 tsp soy sauce</li>
+            <li>1 tsp minced ginger</li>
+            <li>Chopped cilantro and green onion</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Bring broth to a boil in a small pot.</li>
+            <li>Add minced ginger, soy sauce, and leftover rice.</li>
+            <li>Simmer for 5–8 minutes until the rice expands and softens.</li>
+            <li>Ladle into a bowl and garnish with cilantro and green onions.</li>
+          </ol>
+        </div>
+      </div>
 
-        <!-- ==================== RICE RECIPES (3 MENUS) ==================== -->
-        <section id="rice-recipes" class="recipe-section">
-            <div class="section-heading">
-                <span>🍚</span>
-                <h1>Rice Recipes</h1>
-                <p>Have day-old cold rice? These 3 Thai dishes turn it into perfection.</p>
-            </div>
+      <div id="khao-pad-pineapple" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://i1.wp.com/justlagom.co/wp-content/uploads/2020/06/pineapple-fried-rice-2.jpeg?fit=1923%2C2048&ssl=1" alt="Khao Pad Sapparot">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">RICE · SWEET & SAVORY · 15 MIN</p>
+          <h1>Khao Pad Sapparot (Pineapple Fried Rice)</h1>
+          <p>A sweet and savory fried rice styled with leftover rice, curry powder, and pineapple chunks.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2 cups leftover cooked rice</li>
+            <li>1/2 cup pineapple chunks</li>
+            <li>1/2 tsp yellow curry powder</li>
+            <li>1 tbsp soy sauce</li>
+            <li>Cashews or raisins (optional)</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Heat oil in a wok or large pan.</li>
+            <li>Add rice, curry powder, and soy sauce, mixing until yellow and aromatic.</li>
+            <li>Toss in pineapple chunks and cook for another 2 minutes.</li>
+            <li>Top with roasted cashews and serve warm.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-            <!-- 1. Khao Pad -->
-            <div id="khao-pad" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://thecinnamonjar.com/wp-content/uploads/2023/01/cooked-khao-pad-in-frying-pan.jpg" alt="Khao Pad (Thai Fried Rice)">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">RICE · 15 MIN</p>
-                    <h1>Khao Pad (Thai Fried Rice)</h1>
-                    <p>Traditional Thai fried rice seasoned with fish sauce, soy sauce, and fresh lime.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>2 cups cooked leftover jasmine rice (chilled)</li>
-                        <li>2 cloves garlic, minced</li>
-                        <li>1 egg</li>
-                        <li>1 tbsp fish sauce</li>
-                        <li>1 tbsp soy sauce</li>
-                        <li>Lime wedges and cucumber slices for serving</li>
-                    </ul>
+    <!-- EGG RECIPES -->
+    <section id="egg-recipes" class="recipe-section decor-container">
+      <div class="decor-shape shape-dots"></div>
+      <div class="section-heading">
+        <span>🥚</span>
+        <h1>Egg Recipes</h1>
+        <p>Turn simple eggs into crispy, flavorful Thai favorite meals.</p>
+      </div>
 
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Heat oil in a pan and sauté garlic until fragrant.</li>
-                        <li>Push garlic aside, crack in the egg, and scramble gently.</li>
-                        <li>Add cold leftover rice, breaking up any clumps.</li>
-                        <li>Drizzle fish sauce and soy sauce over the rice; stir-fry on high heat for 3 minutes.</li>
-                        <li>Serve hot with cucumber and fresh lime.</li>
-                    </ol>
-                </div>
-            </div>
+      <div id="kai-jeow" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://www.cookingwithnart.com/wp-content/uploads/2020/02/Thai-Omelet-Kai-Jeow-2.jpg" alt="Kai Jeow">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">EGG · 10 MIN</p>
+          <h1>Kai Jeow (Thai Omelette)</h1>
+          <p>A crispy on the outside, fluffy on the inside Thai omelette served over warm rice.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2–3 eggs</li>
+            <li>1 tsp fish sauce</li>
+            <li>1 tsp lime juice or soy sauce</li>
+            <li>2 tbsp cooking oil</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Beat eggs vigorously with fish sauce and lime juice until frothy.</li>
+            <li>Heat oil in a pan until very hot.</li>
+            <li>Pour the egg mixture from high up to create crisp edges.</li>
+            <li>Fry until golden brown, flip once, and serve over rice.</li>
+          </ol>
+        </div>
+      </div>
 
-            <!-- 2. Khao Tom -->
-            <div id="khao-tom" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://hungryinthailand.com/wp-content/uploads/2023/08/khao-tom-thai-rice-soup.webp" alt="Khao Tom (Thai Rice Soup)">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">RICE · SOUP · 15 MIN</p>
-                    <h1>Khao Tom (Thai Rice Soup)</h1>
-                    <p>A comforting, fragrant broth cooked with leftover jasmine rice and fresh herbs.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>1 cup cooked rice</li>
-                        <li>2 cups chicken or vegetable broth</li>
-                        <li>1 tsp soy sauce</li>
-                        <li>1 tsp minced ginger</li>
-                        <li>Chopped cilantro and green onion</li>
-                    </ul>
+      <div id="kai-dao" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://thai-foodie.com/wp-content/uploads/2025/03/thai-fried-eggs-1.jpg" alt="Kai Dao">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">EGG · 5 MIN</p>
+          <h1>Kai Dao (Crispy Thai Fried Egg)</h1>
+          <p>Crispy browned egg whites with a soft yolk, perfect for topping any rice dish.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 egg</li>
+            <li>2 tbsp oil</li>
+            <li>Pinch of chili flakes or soy sauce</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Heat oil over medium-high heat.</li>
+            <li>Crack the egg directly into hot oil.</li>
+            <li>Spoon hot oil over the egg yolk until whites are crispy and bubbly.</li>
+            <li>Remove and place over rice with soy sauce.</li>
+          </ol>
+        </div>
+      </div>
 
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Bring broth to a boil in a small pot.</li>
-                        <li>Add minced ginger, soy sauce, and leftover rice.</li>
-                        <li>Simmer for 5–8 minutes until the rice expands and softens.</li>
-                        <li>Ladle into a bowl and garnish with cilantro and green onions.</li>
-                    </ol>
-                </div>
-            </div>
+      <div id="kai-louk-keuy" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://www.curiouscuisiniere.com/wp-content/uploads/2024/09/Son-In-Law-Eggs-3-1200-4-600x800.jpg" alt="Kai Louk Keuy">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">EGG · SWEET & TANGY · 15 MIN</p>
+          <h1>Kai Louk Keuy (Son-in-Law Eggs)</h1>
+          <p>Hard-boiled eggs fried till golden and drizzled with a tangy sweet tamarind sauce.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>3 hard-boiled eggs (peeled)</li>
+            <li>1 tbsp tamarind paste or lime juice</li>
+            <li>1 tbsp palm sugar or brown sugar</li>
+            <li>1 tbsp fish sauce</li>
+            <li>Crispy fried shallots for garnish</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Deep-fry peeled hard-boiled eggs until the outer skin turns golden crisp. Slice in half.</li>
+            <li>In a small pan, simmer sugar, tamarind, and fish sauce into a thick glaze.</li>
+            <li>Pour the sauce over the eggs and top with crispy fried shallots.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-            <!-- 3. Khao Pad Sapparot -->
-            <div id="khao-pad-pineapple" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://i1.wp.com/justlagom.co/wp-content/uploads/2020/06/pineapple-fried-rice-2.jpeg?fit=1923%2C2048&ssl=1" alt="Khao Pad Sapparot">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">RICE · SWEET & SAVORY · 15 MIN</p>
-                    <h1>Khao Pad Sapparot (Pineapple Fried Rice)</h1>
-                    <p>A sweet and savory fried rice styled with leftover rice, curry powder, and pineapple chunks.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>2 cups leftover cooked rice</li>
-                        <li>1/2 cup pineapple chunks</li>
-                        <li>1/2 tsp yellow curry powder</li>
-                        <li>1 tbsp soy sauce</li>
-                        <li>Cashews or raisins (optional)</li>
-                    </ul>
+    <!-- CHICKEN RECIPES -->
+    <section id="chicken-recipes" class="recipe-section decor-container">
+      <div class="decor-orb orb-2"></div>
+      <div class="decor-shape shape-square"></div>
+      <div class="section-heading">
+        <span>🍗</span>
+        <h1>Chicken Recipes</h1>
+        <p>Transform leftover chicken into savory, herb-packed Thai dishes.</p>
+      </div>
 
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Heat oil in a wok or large pan.</li>
-                        <li>Add rice, curry powder, and soy sauce, mixing until yellow and aromatic.</li>
-                        <li>Toss in pineapple chunks and cook for another 2 minutes.</li>
-                        <li>Top with roasted cashews and serve warm.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
+      <div id="pad-kra-pao" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://thewoksoflife.com/wp-content/uploads/2016/09/pad-kra-pao-7.jpg" alt="Pad Kra Pao">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">CHICKEN · 15 MIN</p>
+          <h1>Pad Kra Pao (Basil Stir-Fry)</h1>
+          <p>Thailand's iconic street dish—spicy chicken stir-fried with garlic and fresh basil.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 cup shredded or chopped leftover chicken</li>
+            <li>3 cloves garlic & 2 red chilies (pounded)</li>
+            <li>1 cup fresh holy basil or sweet basil leaves</li>
+            <li>1 tbsp oyster sauce</li>
+            <li>1 tsp soy sauce</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Sauté pounded garlic and chilies in oil until fragrant.</li>
+            <li>Add leftover chicken and toss until heated through.</li>
+            <li>Season with oyster sauce and soy sauce.</li>
+            <li>Turn off the heat, toss in fresh basil leaves, and stir until wilted.</li>
+          </ol>
+        </div>
+      </div>
 
-        <!-- ==================== EGG RECIPES (3 MENUS) ==================== -->
-        <section id="egg-recipes" class="recipe-section">
-            <div class="section-heading">
-                <span>🥚</span>
-                <h1>Egg Recipes</h1>
-                <p>Turn simple eggs into crispy, flavorful Thai favorite meals.</p>
-            </div>
+      <div id="larb-gai" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://thai-foodie.com/wp-content/uploads/2023/05/larb-gai.jpg" alt="Larb Gai">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">CHICKEN · SALAD · 10 MIN</p>
+          <h1>Larb Gai (Spicy Thai Chicken Salad)</h1>
+          <p>A zesty, spicy chicken salad flavored with lime juice, chilies, and herbs.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 cup cooked shredded chicken</li>
+            <li>1 tbsp lime juice</li>
+            <li>1 tbsp fish sauce</li>
+            <li>1 tsp chili flakes</li>
+            <li>Sliced red onion and mint leaves</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Warm leftover chicken briefly in a pan with a splash of water.</li>
+            <li>Transfer chicken to a bowl and let cool slightly.</li>
+            <li>Mix in lime juice, fish sauce, red onion, and chili flakes.</li>
+            <li>Toss with mint leaves and serve at room temperature.</li>
+          </ol>
+        </div>
+      </div>
 
-            <!-- 1. Kai Jeow -->
-            <div id="kai-jeow" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://www.cookingwithnart.com/wp-content/uploads/2020/02/Thai-Omelet-Kai-Jeow-2.jpg" alt="Kai Jeow (Thai Omelette)">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">EGG · 10 MIN</p>
-                    <h1>Kai Jeow (Thai Omelette)</h1>
-                    <p>A crispy on the outside, fluffy on the inside Thai omelette served over warm rice.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>2–3 eggs</li>
-                        <li>1 tsp fish sauce</li>
-                        <li>1 tsp lime juice or soy sauce</li>
-                        <li>2 tbsp cooking oil</li>
-                    </ul>
+      <div id="gai-pad-med" class="recipe-detail">
+        <div class="recipe-detail-image">
+          <img src="https://hungryinthailand.com/wp-content/uploads/2023/03/gai-pad-med-mamuang.webp" alt="Gai Pad Med Mamuang">
+        </div>
+        <div class="recipe-detail-content">
+          <p class="subtitle">CHICKEN · CASHEW · 15 MIN</p>
+          <h1>Gai Pad Med Mamuang (Cashew Chicken)</h1>
+          <p>Leftover chicken stir-fried with crunchy cashews, bell peppers, and savory sauce.</p>
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 cup cooked chicken</li>
+            <li>1/4 cup roasted cashew nuts</li>
+            <li>1/2 bell pepper or onion (chopped)</li>
+            <li>1 tbsp oyster sauce</li>
+            <li>1 tsp chili paste or soy sauce</li>
+          </ul>
+          <h3>How to make it</h3>
+          <ol>
+            <li>Heat oil in a wok and fry onions and bell peppers.</li>
+            <li>Add cooked chicken and stir-fry for 2 minutes.</li>
+            <li>Stir in oyster sauce and chili paste.</li>
+            <li>Fold in roasted cashew nuts and serve immediately.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Beat eggs vigorously with fish sauce and lime juice until frothy.</li>
-                        <li>Heat oil in a pan until very hot.</li>
-                        <li>Pour the egg mixture from high up to create crisp edges.</li>
-                        <li>Fry until golden brown, flip once, and serve over rice.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <!-- 2. Kai Dao -->
-            <div id="kai-dao" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://thai-foodie.com/wp-content/uploads/2025/03/thai-fried-eggs-1.jpg" alt="Kai Dao (Crispy Fried Egg)">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">EGG · 5 MIN</p>
-                    <h1>Kai Dao (Crispy Thai Fried Egg)</h1>
-                    <p>Crispy browned egg whites with a soft yolk, perfect for topping any rice dish.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>1 egg</li>
-                        <li>2 tbsp oil</li>
-                        <li>Pinch of chili flakes or soy sauce</li>
-                    </ul>
-
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Heat oil over medium-high heat.</li>
-                        <li>Crack the egg directly into hot oil.</li>
-                        <li>Spoon hot oil over the egg yolk until whites are crispy and bubbly.</li>
-                        <li>Remove and place over rice with soy sauce.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <!-- 3. Kai Louk Keuy -->
-            <div id="kai-louk-keuy" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://www.curiouscuisiniere.com/wp-content/uploads/2024/09/Son-In-Law-Eggs-3-1200-4-600x800.jpg" alt="Kai Louk Keuy">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">EGG · SWEET & TANGY · 15 MIN</p>
-                    <h1>Kai Louk Keuy (Son-in-Law Eggs)</h1>
-                    <p>Hard-boiled eggs fried till golden and drizzled with a tangy sweet tamarind sauce.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>3 hard-boiled eggs (peeled)</li>
-                        <li>1 tbsp tamarind paste or lime juice</li>
-                        <li>1 tbsp palm sugar or brown sugar</li>
-                        <li>1 tbsp fish sauce</li>
-                        <li>Crispy fried shallots for garnish</li>
-                    </ul>
-
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Deep-fry peeled hard-boiled eggs until the outer skin turns golden crisp. Slice in half.</li>
-                        <li>In a small pan, simmer sugar, tamarind, and fish sauce into a thick glaze.</li>
-                        <li>Pour the sauce over the eggs and top with crispy fried shallots.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== CHICKEN RECIPES (3 MENUS) ==================== -->
-        <section id="chicken-recipes" class="recipe-section">
-            <div class="section-heading">
-                <span>🍗</span>
-                <h1>Chicken Recipes</h1>
-                <p>Transform leftover chicken into savory, herb-packed Thai dishes.</p>
-            </div>
-
-            <!-- 1. Pad Kra Pao -->
-            <div id="pad-kra-pao" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://thewoksoflife.com/wp-content/uploads/2016/09/pad-kra-pao-7.jpg" alt="Pad Kra Pao">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">CHICKEN · 15 MIN</p>
-                    <h1>Pad Kra Pao (Basil Stir-Fry)</h1>
-                    <p>Thailand's iconic street dish—spicy chicken stir-fried with garlic and fresh basil.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>1 cup shredded or chopped leftover chicken</li>
-                        <li>3 cloves garlic & 2 red chilies (pounded)</li>
-                        <li>1 cup fresh holy basil or sweet basil leaves</li>
-                        <li>1 tbsp oyster sauce</li>
-                        <li>1 tsp soy sauce</li>
-                    </ul>
-
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Sauté pounded garlic and chilies in oil until fragrant.</li>
-                        <li>Add leftover chicken and toss until heated through.</li>
-                        <li>Season with oyster sauce and soy sauce.</li>
-                        <li>Turn off the heat, toss in fresh basil leaves, and stir until wilted.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <!-- 2. Larb Gai -->
-            <div id="larb-gai" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://thai-foodie.com/wp-content/uploads/2023/05/larb-gai.jpg" alt="Larb Gai">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">CHICKEN · SALAD · 10 MIN</p>
-                    <h1>Larb Gai (Spicy Thai Chicken Salad)</h1>
-                    <p>A zesty, spicy chicken salad flavored with lime juice, chilies, and herbs.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>1 cup cooked shredded chicken</li>
-                        <li>1 tbsp lime juice</li>
-                        <li>1 tbsp fish sauce</li>
-                        <li>1 tsp chili flakes</li>
-                        <li>Sliced red onion and mint leaves</li>
-                    </ul>
-
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Warm leftover chicken briefly in a pan with a splash of water.</li>
-                        <li>Transfer chicken to a bowl and let cool slightly.</li>
-                        <li>Mix in lime juice, fish sauce, red onion, and chili flakes.</li>
-                        <li>Toss with mint leaves and serve at room temperature.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <!-- 3. Gai Pad Med Mamuang -->
-            <div id="gai-pad-med" class="recipe-detail">
-                <div class="recipe-detail-image">
-                    <img src="https://hungryinthailand.com/wp-content/uploads/2023/03/gai-pad-med-mamuang.webp" alt="Gai Pad Med Mamuang">
-                </div>
-                <div class="recipe-detail-content">
-                    <p class="subtitle">CHICKEN · CASHEW · 15 MIN</p>
-                    <h1>Gai Pad Med Mamuang (Cashew Chicken)</h1>
-                    <p>Leftover chicken stir-fried with crunchy cashews, bell peppers, and savory sauce.</p>
-                    
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>1 cup cooked chicken</li>
-                        <li>1/4 cup roasted cashew nuts</li>
-                        <li>1/2 bell pepper or onion (chopped)</li>
-                        <li>1 tbsp oyster sauce</li>
-                        <li>1 tsp chili paste or soy sauce</li>
-                    </ul>
-
-                    <h3>How to make it</h3>
-                    <ol>
-                        <li>Heat oil in a wok and fry onions and bell peppers.</li>
-                        <li>Add cooked chicken and stir-fry for 2 minutes.</li>
-                        <li>Stir in oyster sauce and chili paste.</li>
-                        <li>Fold in roasted cashew nuts and serve immediately.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 Leftover Chef · Turn leftovers into delicious Thai meals.</p>
-    </footer>
+  <footer>
+    <p>© 2026 Leftover Chef · Turn leftovers into delicious Thai meals.</p>
+  </footer>
 
 </body>
 </html>
