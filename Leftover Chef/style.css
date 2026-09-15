@@ -1,6 +1,6 @@
 /* =========================================
- THEME: MODERN THAI BISTRO (LUXURY SPICE)
- ========================================= */
+THEME: MODERN THAI BISTRO (LUXURY SPICE)
+========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap');
 
@@ -40,12 +40,16 @@
 }
 
 /* =========================================
- GENERAL RESET & STICKY FOOTER SETUP
- ========================================= */
+GENERAL RESET & STICKY FOOTER SETUP
+========================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -65,6 +69,11 @@ main {
   flex: 1;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Custom Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
@@ -81,8 +90,8 @@ main {
 }
 
 /* =========================================
- GLOBAL DECORATIVE SHAPES & ANIMATIONS
- ========================================= */
+GLOBAL DECORATIVE SHAPES & ANIMATIONS
+========================================= */
 .decor-container {
   position: relative;
   z-index: 1;
@@ -184,8 +193,8 @@ main {
 }
 
 /* =========================================
- TYPOGRAPHY ENHANCEMENTS
- ========================================= */
+TYPOGRAPHY ENHANCEMENTS
+========================================= */
 h1, h2, h3 {
   font-family: var(--font-heading);
   color: var(--text-dark);
@@ -209,6 +218,8 @@ h1, h2, h3 {
   border-radius: var(--radius-full);
   border: 1px solid rgba(212, 163, 89, 0.3);
   width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .subtitle::before {
@@ -251,8 +262,8 @@ h1, h2, h3 {
 }
 
 /* =========================================
- NAVIGATION & HEADER
- ========================================= */
+NAVIGATION & HEADER
+========================================= */
 header {
   background: var(--bg-glass);
   backdrop-filter: blur(12px);
@@ -270,6 +281,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .logo {
@@ -288,6 +301,8 @@ nav {
   background: rgba(0, 0, 0, 0.03);
   padding: 5px;
   border-radius: var(--radius-full);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -312,8 +327,8 @@ nav {
 }
 
 /* =========================================
- HERO SECTION
- ========================================= */
+HERO SECTION
+========================================= */
 .hero {
   max-width: 1200px;
   margin: 0 auto;
@@ -392,8 +407,8 @@ nav {
 }
 
 /* =========================================
- INGREDIENT CARDS (ingredients.html)
- ========================================= */
+INGREDIENT CARDS (ingredients.html)
+========================================= */
 .ingredients {
   max-width: 1200px;
   margin: 0 auto 100px;
@@ -473,8 +488,8 @@ nav {
 }
 
 /* =========================================
- ANIMATED INGREDIENTS (INDEX PAGE)
- ========================================= */
+ANIMATED INGREDIENTS (INDEX PAGE)
+========================================= */
 .animated-ingredients-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -525,8 +540,8 @@ nav {
 }
 
 /* =========================================
- HOW IT WORKS SECTION
- ========================================= */
+HOW IT WORKS SECTION
+========================================= */
 .how-it-works {
   max-width: 1200px;
   margin: 20px auto 100px;
@@ -582,8 +597,8 @@ nav {
 }
 
 /* =========================================
- POPULAR RECIPES & CARDS
- ========================================= */
+POPULAR RECIPES & CARDS
+========================================= */
 .popular-recipes {
   max-width: 1200px;
   margin: 0 auto 100px;
@@ -659,8 +674,8 @@ nav {
 }
 
 /* =========================================
- RECIPES QUICK NAV & SECTIONS (recipes.html)
- ========================================= */
+RECIPES QUICK NAV & SECTIONS (recipes.html)
+========================================= */
 .recipes-quick-nav {
   max-width: 1200px;
   margin: 0 auto 60px;
@@ -828,17 +843,29 @@ nav {
 }
 
 /* =========================================
- CONTACT PAGE CARDS
- ========================================= */
+CONTACT PAGE CARDS
+========================================= */
 .contact-section {
   max-width: 720px;
-  margin: 0 auto 100px;
+  margin: 40px auto 100px;
   padding: 0 30px;
+  position: relative;
 }
 
 .contact-intro {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.contact-intro h1 {
+  font-size: 42px;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.contact-intro p {
+  color: var(--text-muted);
+  font-size: 18px;
 }
 
 .contact-card-container {
@@ -926,8 +953,8 @@ nav {
 }
 
 /* =========================================
- ABOUT PAGE
- ========================================= */
+ABOUT PAGE
+========================================= */
 .about-section {
   max-width: 1200px;
   margin: 0 auto 100px;
@@ -1034,8 +1061,8 @@ nav {
 }
 
 /* =========================================
- FOOTER (ALWAYS LOCKED AT BOTTOM)
- ========================================= */
+FOOTER (ALWAYS LOCKED AT BOTTOM)
+========================================= */
 footer {
   text-align: center;
   padding: 40px 20px;
@@ -1047,59 +1074,9 @@ footer {
 }
 
 /* =========================================
- RESPONSIVE BREAKPOINTS
- ========================================= */
-@media (max-width: 992px) {
-  .hero,
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-content p {
-    margin: 0 auto 36px;
-  }
-  .steps, 
-  .recipe-cards,
-  .ingredient-grid,
-  .values-grid,
-  .quick-nav-groups {
-    grid-template-columns: 1fr;
-  }
-  .recipe-detail {
-    flex-direction: column;
-  }
-  .recipe-detail-image {
-    min-height: 260px;
-  }
-}
-
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .hero-content h1 {
-    font-size: 38px;
-  }
-  .ingredient-icon-group {
-    gap: 40px;
-  }
-  .ingredient-emoji {
-    font-size: 65px;
-  }
-  .contact-card-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-card-container {
-    padding: 24px;
-  }
-}
-/* =========================================
- ENHANCED RESPONSIVE MEDIA QUERIES
- ========================================= */
-
-/* Tablet / iPad Layouts (Widths up to 1024px) */
-@media (max-width: 1024px) {
+RESPONSIVE BREAKPOINTS
+========================================= */
+@media screen and (max-width: 1024px) {
   nav {
     padding: 16px 20px;
   }
@@ -1116,7 +1093,6 @@ footer {
     margin-right: auto;
   }
 
-  /* Adjust 3-column grids to 2-columns on tablets */
   .ingredient-grid,
   .recipe-cards,
   .values-grid,
@@ -1134,26 +1110,31 @@ footer {
   }
 }
 
-/* Mobile Devices (Widths up to 768px) */
-@media (max-width: 768px) {
-  /* Navigation Bar Adjustments */
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+
   nav {
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
+    padding: 12px 16px;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
+    gap: 4px;
+    padding: 4px;
+    justify-content: center;
   }
 
   .nav-links a {
-    padding: 6px 12px;
-    font-size: 13px;
+    padding: 6px 10px;
+    font-size: 12px;
+    flex: 1 1 auto;
+    text-align: center;
   }
 
-  /* Hero & Typography Adjustments */
   .hero-content h1 {
     font-size: 34px;
   }
@@ -1162,7 +1143,6 @@ footer {
     font-size: 32px;
   }
 
-  /* Single Column Layouts for Mobile */
   .ingredient-grid,
   .steps,
   .recipe-cards,
@@ -1181,127 +1161,16 @@ footer {
   }
 
   .recipe-detail-content {
-    padding: 24px;
-  }
-
-  .contact-card-container,
-  .quick-nav-container,
-  .about-cta {
-    padding: 24px 16px;
-  }
-}
-/* =========================================
- COMPREHENSIVE RESPONSIVE UPGRADES
- ========================================= */
-
-/* Prevent image overflow on any viewport width */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Fluid Navigation Bar with Auto Wrapping */
-nav {
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.nav-links {
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-}
-
-/* Tablet & iPad (Portrait & Landscape: 768px – 1024px) */
-@media screen and (max-width: 1024px) {
-  nav {
-    padding: 16px 20px;
-  }
-
-  .hero,
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 32px;
-  }
-
-  .hero-content p,
-  .subtitle {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .ingredient-grid,
-  .recipe-cards,
-  .values-grid,
-  .quick-nav-groups {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .recipe-detail {
-    flex-direction: column;
-  }
-
-  .recipe-detail-image {
-    min-height: 250px;
-  }
-}
-
-/* Standard Mobile Devices (Up to 768px) */
-@media screen and (max-width: 768px) {
-  header {
-    position: relative; /* Prevents sticky header issues on mobile Safari */
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 16px;
-  }
-
-  .nav-links {
-    width: 100%;
-    gap: 4px;
-    padding: 4px;
-  }
-
-  .nav-links a {
-    padding: 6px 10px;
-    font-size: 12px;
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-  }
-
-  .page-header h1 {
-    font-size: 30px;
-  }
-
-  .ingredient-grid,
-  .steps,
-  .recipe-cards,
-  .values-grid,
-  .quick-nav-groups,
-  .contact-card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .recipe-detail-content {
     padding: 24px 18px;
   }
 
-  .quick-nav-container,
   .contact-card-container,
+  .quick-nav-container,
   .about-cta {
     padding: 24px 16px;
   }
 }
 
-/* Small Smartphones (iPhone SE, Galaxy A series, & Foldables: Up to 480px) */
 @media screen and (max-width: 480px) {
   body {
     padding: 0;
